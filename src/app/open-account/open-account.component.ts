@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-open-account',
@@ -8,8 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class OpenAccountComponent implements OnInit {
 
   constructor() { }
+  msg:string="";
+  userName: any; 
+  ;
+  profileForm = new FormGroup({
+    lname: new FormControl(''),
+    fname: new FormControl(''),
+    installment :new FormControl('')
+  });
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit() { 
+    
+  } 
+  onClickSubmit() {
+    this.msg="Account Request send for approval"
+    console.log(this.profileForm)
+    }
 }

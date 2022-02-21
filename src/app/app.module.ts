@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { OpenAccountComponent } from './open-account/open-account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CalculationComponent } from './calculation/calculation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoanDetailsComponent } from './loan-details/loan-details.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { CalculationComponent } from './calculation/calculation.component';
     HomeComponent,
     OpenAccountComponent,
     ProfileComponent,
-    CalculationComponent
+    CalculationComponent,
+    LoanDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule , 
+    ReactiveFormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
